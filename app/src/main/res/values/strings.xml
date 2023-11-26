@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Lab4</string>
+    <string name="information_is_missing">Information is missing</string>
+    <string name="count_want_to_read">Count want to read : </string>
+    <string name="number_of_pages_median">Median number of pages : </string>
+    <string name="first_publish_year">First publish year : </string>
+    <string name="rating">Rating : </string>
+</resources>
