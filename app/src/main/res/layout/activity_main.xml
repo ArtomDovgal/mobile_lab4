@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".main.MainActivity">
 
+    <TextView
+        android:id="@+id/appTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/openlibrary"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/bookTitleEditText"
         android:layout_width="240dp"
@@ -13,22 +25,26 @@
         android:ems="10"
         android:inputType="text"
         android:hint="Enter title"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintTop_toBottomOf="@+id/appTitleTextView"/>
 
     <Button
         android:id="@+id/findBookButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:text="@string/find"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/bookTitleEditText"
-        tools:layout_editor_absoluteY="11dp" />
+        app:layout_constraintTop_toBottomOf="@+id/appTitleTextView"/>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/booksRecyclerView"
+        android:layout_marginTop="20dp"
         android:layout_width="409dp"
         android:layout_height="670dp"
         app:layout_constraintTop_toBottomOf="@+id/bookTitleEditText"

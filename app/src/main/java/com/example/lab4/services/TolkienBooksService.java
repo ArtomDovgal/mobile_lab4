@@ -25,7 +25,7 @@ import retrofit2.Response;
 
 public class TolkienBooksService {
     private static  final String author = "tolkien";
-    private static final Integer limit = 3;
+    private static final Integer limit = 10;
     private ExecutorService executorService;
     private BookDAO bookDAO;
     private LibraryApi libraryApi;
