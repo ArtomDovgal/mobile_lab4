@@ -18,7 +18,6 @@ public class MainViewModel extends BaseViewModel {
 
     private Result<List<Book>> booksResult = Result.empty();
     private MutableLiveData<ViewState> stateLiveData = new MutableLiveData<>();
-    private Cancellable cancellable;
 
     {
        updateViewState(Result.empty());
@@ -28,11 +27,6 @@ public class MainViewModel extends BaseViewModel {
         super(tolkienBooksService);
     }
 
-    @Override
-    protected void onCleared() {
-        super.onCleared();
-        if(cancellable != null) cancellable.cancel();
-    }
 
     public LiveData<ViewState> getViewState(){
         return stateLiveData;
